@@ -336,7 +336,7 @@ Zotero.AutoFetch = {
 					req2.send(null);
 				} else {
 					if (Zotero.Debug.enabled) Zotero.debug("[auto-fetch][google] req.status == " + req.status);
-					alert("[ERROR][Auto Fetch][Google Schoolar] Request return HTTP " + req.status)
+					alert("[ERROR][Auto Fetch][Google Scholar] Request return HTTP " + req.status)
 				}
 			}
 		};
@@ -370,7 +370,7 @@ Zotero.AutoFetch = {
 								var fileBaseName = split_url[split_url.length - 1].split('.pdf')[0]
 							} catch (e) {
 								Zotero.debug("[auto-fetch] Error parsing webpage 1" + e)
-								alert("[ERROR][Auto Fetch][Google Schoolar] Error parsing webpage 1" + e)
+								alert("[ERROR][Auto Fetch][Google Scholar] Error parsing webpage 1" + e)
 							}
 
 							try {
