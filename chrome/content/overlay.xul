@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://zoteroautofetch/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://zoteroautofetch/locale/overlay.dtd">
+
+<overlay
+    id="zoteroautofetch"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script
+        type="application/x-javascript"
+        src="chrome://zoteroautofetch/content/scripts/zoteroautofetch.js"/>
+
+		<commandset id="mainCommandSet">
+			<command id="cmd_zotero_autofetch_update_all" oncommand="Zotero.AutoFetch.updateAll();"/>
+		</commandset>
+
+		<menupopup id="menu_ToolsPopup">
+				<menuseparator/>
+				<menuitem
+						id="zotero-autofetch-tools-updateall"
+						label="&zotero.autofetch.updateAll.label;"
+						command="cmd_zotero_autofetch_update_all"
+						class="menuitem-iconic zotero-autofetch-icon"/>
+		</menupopup>
+
+
+    <popup id="zotero-collectionmenu">
+				<menuseparator/>
+        <menu
+            id="zotero-itemmenu-autofetch"
+            label="&zotero.autofetch.updateCollection.label;"
+            >
+            <menupopup id="zotero-itemmenu-autofetch-menu">
+                <menuitem
+                    id="zotero-collectionmenu-autofetch-goo"
+                    label="&zotero.autofetch.updateCollectionGoo.label;"
+                    oncommand="Zotero.AutoFetch.updateSelectedEntity('google')"
+                    class="menuitem-iconic zotero-autofetch-icon"/>
+                <menuitem
+                    id="zotero-collectionmenu-autofetch-sci"
+                    label="&zotero.autofetch.updateCollectionSci.label;"
+                    oncommand="Zotero.AutoFetch.updateSelectedEntity('scihub')"
+                    class="menuitem-iconic zotero-autofetch-icon"/>
+                <menuitem
+                    id="zotero-collectionmenu-autofetch-auto"
+                    label="&zotero.autofetch.updateCollectionAuto.label;"
+                    oncommand="Zotero.AutoFetch.updateSelectedEntity('auto')"
+                    class="menuitem-iconic zotero-autofetch-icon"/>
+            </menupopup>
+		    </menu>
+    </popup>
+
+    <popup
+        id="zotero-itemmenu"
+        onpopupshowing="ZoteroPane.buildItemContextMenu();">
+				<menuseparator/>
+        <menu
+            id="zotero-itemmenu-autofetch-goo"
+            label="&zotero.autofetch.update.label;">
+            <menupopup id="zotero-itemmenu-autofetch-menu">
+                <menuitem
+                id="zotero-itemmenu-autofetch-sci"
+                label="&zotero.autofetch.updateGoo.label;"
+                oncommand="Zotero.AutoFetch.updateSelectedItems('google')"
+                class="menuitem-iconic zotero-autofetch-icon"/>
+                <menuitem
+                id="zotero-itemmenu-autofetch-sci"
+                label="&zotero.autofetch.updateSci.label;"
+                oncommand="Zotero.AutoFetch.updateSelectedItems('scihub')"
+                class="menuitem-iconic zotero-autofetch-icon"/>
+                <menuitem
+                id="zotero-itemmenu-autofetch"
+                label="&zotero.autofetch.updateAuto.label;"
+                oncommand="Zotero.AutoFetch.updateSelectedItems('auto')"
+                class="menuitem-iconic zotero-autofetch-icon"/>
+            </menupopup>
+	    	</menu>
+    </popup>
+</overlay>

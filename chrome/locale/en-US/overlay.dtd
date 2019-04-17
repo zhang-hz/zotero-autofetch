@@ -1,0 +1,14 @@
+<!ENTITY zotero.autofetch.update.label "Auto Fetch PDF">
+<!ENTITY zotero.autofetch.updateGoo.label "From Google Scholar">
+<!ENTITY zotero.autofetch.updateSci.label "From Scihub">
+<!ENTITY zotero.autofetch.updateAuto.label "From Google and Scihub">
+<!ENTITY zotero.autofetch.updateAll.label "Auto Fetch All PDFs">
+<!ENTITY zotero.autofetch.updateCollection.label "Auto Fetch Collection PDFs">
+<!ENTITY zotero.autofetch.updateCollectionGoo.label "From Google Scholar">
+<!ENTITY zotero.autofetch.updateCollectionSci.label "From Scihub">
+<!ENTITY zotero.autofetch.updateCollectionAuto.label "From Google and Scihub">
+<!ENTITY zotero.autofetch.prefUA.label "User-Agent: ">
+<!ENTITY zotero.autofetch.prefAutoDownload.label "Automatic PDF Download">
+<!ENTITY zotero.autofetch.prefTimeInterval.label "Download Interval (ms)">
+<!ENTITY zotero.autofetch.prefScihubUrl.label "Scihub URL: (Note https only works with sci-hub.se due to invalid SSL certs on mirrors)">
+<!ENTITY zotero.autofetch.prefGoogleUrl.label "Google Scholar URL: ">

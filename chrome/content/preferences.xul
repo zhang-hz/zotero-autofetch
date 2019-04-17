@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "chrome://zoteroautofetch/locale/overlay.dtd">
+
+<overlay id="zoteroautofetch-preferences"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:html="http://www.w3.org/1999/xhtml">
+
+  <prefwindow id="zotero-prefs">
+    <prefpane id="zotero-prefpane-zoteroautofetch"
+            insertafter="zotero-prefpane-advanced"
+            label="Auto Fetch"
+            image="chrome://zoteroautofetch/skin/favicon.png"
+						onpaneload="initPreferences();"
+            >
+      <preferences id="zotero-preferences-zoteroautofetch">
+        <preference id="pref-zoteroautofetch-automatic-pdf-download" name="extensions.zotero.zoteroautofetch.automatic_pdf_download" type="bool"/>
+        <preference id="pref-zoteroautofetch-timeinterval" name="extensions.zotero.zoteroautofetch.timeinterval" type="string"/>
+        <preference id="pref-zoteroautofetch-scihub-url" name="extensions.zotero.zoteroautofetch.scihub_url" type="string"/>
+        <preference id="pref-zoteroautofetch-googlescholar-url" name="extensions.zotero.zoteroautofetch.googlescholar_url" type="string"/>
+        <preference id="pref-zoteroautofetch-ua" name="extensions.zotero.zoteroautofetch.ua" type="string"/>
+      </preferences>
+      <vbox flex="1">
+        <grid>
+          <columns>
+            <column/>
+            <column flex="1"/>
+          </columns>
+          <rows>
+            <row>
+              <label value="&zotero.autofetch.prefAutoDownload.label;"/>
+              <checkbox id="id-zoteroautofetch-automatic-pdf-download" preference="pref-zoteroautofetch-automatic-pdf-download"/>
+            </row>
+            <row>
+              <label value="&zotero.autofetch.prefTimeInterval.label;"/>
+              <textbox id="id-zoteroautofetch-timeinterval" preference="pref-zoteroautofetch-timeinterval"/>
+            </row>
+            <row>
+              <label value="&zotero.autofetch.prefScihubUrl.label;"/>
+              <textbox id="id-zoteroautofetch-scihub-url" preference="pref-zoteroautofetch-scihub-url"/>
+            </row>
+            <row>
+              <label value="&zotero.autofetch.prefGoogleUrl.label;"/>
+              <textbox id="id-zoteroautofetch-googlescholar-url" preference="pref-zoteroautofetch-googlescholar-url"/>
+            </row>
+            <row>
+              <label value="&zotero.autofetch.prefUA.label;"/>
+              <textbox id="id-zoteroautofetch-ua" preference="pref-zoteroautofetch-ua"/>
+            </row>
+          </rows>
+        </grid>
+      </vbox>
+    </prefpane>
+  </prefwindow>
+
+	<!-- Include the main extension logic -->
+	<script src="chrome://zoteroautofetch/content/scripts/preferences.js"/>
+
+</overlay>

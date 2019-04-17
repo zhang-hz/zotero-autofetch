@@ -1,0 +1,14 @@
+<!ENTITY zotero.autofetch.update.label "自动下载文档">
+<!ENTITY zotero.autofetch.updateGoo.label "谷歌学术">
+<!ENTITY zotero.autofetch.updateSci.label "Scihub">
+<!ENTITY zotero.autofetch.updateAuto.label "自动选择">
+<!ENTITY zotero.autofetch.updateAll.label "自动下载全部文档">
+<!ENTITY zotero.autofetch.updateCollection.label "分类内自动下载文档">
+<!ENTITY zotero.autofetch.updateCollectionGoo.label "谷歌学术">
+<!ENTITY zotero.autofetch.updateCollectionSci.label "Scihub">
+<!ENTITY zotero.autofetch.updateCollectionAuto.label "自动选择">
+<!ENTITY zotero.autofetch.prefUA.label "User-Agent: ">
+<!ENTITY zotero.autofetch.prefAutoDownload.label "文档自动下载">
+<!ENTITY zotero.autofetch.prefTimeInterval.label "下载间隔(ms)">
+<!ENTITY zotero.autofetch.prefScihubUrl.label "Scihub域名: (注意：由于证书的关系，https只能在sci-hub.se域名下开启)">
+<!ENTITY zotero.autofetch.prefGoogleUrl.label "谷歌学术域名: ">

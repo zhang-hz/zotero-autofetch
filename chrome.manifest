@@ -1,0 +1,7 @@
+content zoteroautofetch chrome/content/
+skin zoteroautofetch default	chrome/skin/default/zoteroautofetch/
+locale zoteroautofetch en-US chrome/locale/en-US/
+locale zoteroautofetch zh-CN chrome/locale/zh-CN/
+
+overlay chrome://zotero/content/zoteroPane.xul chrome://zoteroautofetch/content/overlay.xul
+overlay chrome://zotero/content/preferences/preferences.xul chrome://zoteroautofetch/content/preferences.xul

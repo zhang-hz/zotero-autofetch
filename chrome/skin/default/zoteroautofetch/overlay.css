@@ -1,0 +1,6 @@
+.zotero-autofetch-icon {
+	list-style-image: url('chrome://zoteroautofetch/skin/favicon.png');
+}
+.zotero-autofetch-no-icon {
+	list-style-image: none;
+}
