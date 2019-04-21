@@ -1,4 +1,4 @@
-all: builddir clean
+all: builddir
 ifdef VERSION
 	awk '/em:version=/ { $$0="      em:version=\"${VERSION}\""} { print }' install.rdf > install.rdf.temp && mv install.rdf.temp install.rdf
 	zip -r builds/zotero-autofetch-${VERSION}.xpi chrome/* chrome.manifest install.rdf

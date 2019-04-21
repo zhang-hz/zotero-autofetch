@@ -128,6 +128,14 @@ Zotero.AutoFetch = {
 		if (items.length == 0 ||
 			Zotero.AutoFetch.numberOfUpdatedItems < Zotero.AutoFetch.toUpdate) {
 			return;
+		}else if(items.length > 1){
+			
+			for(var i = 0;i < items.length;i++){
+				if(items[i].numPDFAttachments()>0){
+					items.splice(i,1)
+					i--
+				}
+			}
 		}
 
 		// Reset our state and figure out how many items we have to update.
