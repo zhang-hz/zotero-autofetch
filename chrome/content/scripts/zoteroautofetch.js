@@ -162,25 +162,26 @@ Zotero.AutoFetch = {
 		// Update a single item with a pdf.
 		Zotero.AutoFetch.current++;
 		var type = Zotero.AutoFetch.paperType
-		if(type === "google"){
+		if(type === "scihub"){
+			setTimeout(function(){
+				this.Zotero.AutoFetch.updateSciItem(
+					this.Zotero.AutoFetch.itemsToUpdate[Zotero.AutoFetch.current]
+				);
+			},timeInterval)
+		} else if(type === "auto"){
+			setTimeout(function(){
+				this.Zotero.AutoFetch.updateItem(
+					this.Zotero.AutoFetch.itemsToUpdate[Zotero.AutoFetch.current]
+				);
+			},timeInterval)
+		} else {
+			Zotero.AutoFetch.paperType = "google"
 			setTimeout(function(){
 				this.Zotero.AutoFetch.updateGooItem(
 					this.Zotero.AutoFetch.itemsToUpdate[Zotero.AutoFetch.current]
 				);
 			},timeInterval)
 			
-		} else if(type === "scihub"){
-			setTimeout(function(){
-				this.Zotero.AutoFetch.updateSciItem(
-					this.Zotero.AutoFetch.itemsToUpdate[Zotero.AutoFetch.current]
-				);
-			},timeInterval)
-		} else {
-			setTimeout(function(){
-				this.Zotero.AutoFetch.updateItem(
-					this.Zotero.AutoFetch.itemsToUpdate[Zotero.AutoFetch.current]
-				);
-			},timeInterval)
 		}
 		
 	},

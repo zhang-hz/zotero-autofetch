@@ -12,7 +12,7 @@
       RDF:about="urn:mozilla:install-manifest"
       em:id="zoteroautofetch@siliconeer.tech"
       em:name="Zotero Auto Fetch"
-      em:version="0.0.2"
+      em:version="0.0.3"
       em:type="2"
       em:creator="Zhang Haozhi"
       em:description="Zotero plugin for automatic download of PDFs from Scihub and Google Scholar"
